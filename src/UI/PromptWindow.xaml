@@ -1,0 +1,15 @@
+<Window x:Class="PromptManager.PromptWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Prompt Window" Height="450" Width="800">
+    <Grid>
+        <Label Content="Title" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="titleTextBox" HorizontalAlignment="Left" Height="23" Margin="10,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        
+        <Label Content="Content" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="contentTextBox" HorizontalAlignment="Left" Height="23" Margin="10,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        
+        <Button x:Name="saveButton" Content="Save" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="deleteButton" Content="Delete" HorizontalAlignment="Left" Margin="90,110,0,0" VerticalAlignment="Top" Width="75"/>
+    </Grid>
+</Window>

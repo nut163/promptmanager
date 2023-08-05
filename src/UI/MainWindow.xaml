@@ -1,0 +1,45 @@
+```xml
+<Window x:Class="PromptInstructionManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Prompt and Instruction Manager" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Menu>
+            <MenuItem Header="File">
+                <MenuItem Header="Import" Click="Import_Click"/>
+                <MenuItem Header="Export" Click="Export_Click"/>
+            </MenuItem>
+            <MenuItem Header="Edit">
+                <MenuItem Header="Add Prompt" Click="AddPrompt_Click"/>
+                <MenuItem Header="Add Instruction" Click="AddInstruction_Click"/>
+            </MenuItem>
+        </Menu>
+        <TabControl Grid.Row="1">
+            <TabItem Header="Prompts">
+                <DataGrid x:Name="PromptDataGrid" AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding ID}"/>
+                        <DataGridTextColumn Header="Title" Binding="{Binding Title}"/>
+                        <DataGridTextColumn Header="Content" Binding="{Binding Content}"/>
+                        <DataGridTextColumn Header="Timestamp" Binding="{Binding Timestamp}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+            <TabItem Header="Instructions">
+                <DataGrid x:Name="InstructionDataGrid" AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding ID}"/>
+                        <DataGridTextColumn Header="Prompt ID" Binding="{Binding PromptID}"/>
+                        <DataGridTextColumn Header="Instruction Text" Binding="{Binding InstructionText}"/>
+                        <DataGridTextColumn Header="Timestamp" Binding="{Binding Timestamp}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
+```
